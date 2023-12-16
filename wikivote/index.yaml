@@ -1,39 +1,30 @@
-apiVersion: v2
-name: wikivote
-description: WikiVote is a GitHub application that allows holding a vote on issues and pull requests
-type: application
-version: 1.1.1
-kubeVersion: ">= 1.19.0-0"
-home: https://wikidev.org/
-icon: https://raw.githubusercontent.com/wikidevllc/wikivote/main/docs/logo/logo.png
-keywords:
-  - git
-  - wiki
-  - vote
-  - wikivote
-maintainers:
-  - name: Zach Esenbock
-    email: zache@wikidev.org
-dependencies:
-  - name: postgresql
+apiVersion: v1
+entries:
+  postgresql:
+  - apiVersion: v1
+    appVersion: 11.6.0
+    created: "2023-12-16T13:06:31.9867922-06:00"
+    description: Chart for PostgreSQL, an object-relational database management system
+      (ORDBMS) with an emphasis on extensibility and on standards-compliance.
+    digest: 44d2d26dae70052f9b7d14094c6eb5632345cf73fa7bf507c37bf8838b9c489e
+    home: https://www.postgresql.org/
+    icon: https://bitnami.com/assets/stacks/postgresql/img/postgresql-stack-110x117.png
+    keywords:
+    - postgresql
+    - postgres
+    - database
+    - sql
+    - replication
+    - cluster
+    maintainers:
+    - email: containers@bitnami.com
+      name: Bitnami
+    - email: cedric@desaintmartin.fr
+      name: desaintmartin
+    name: postgresql
+    sources:
+    - https://github.com/bitnami/bitnami-docker-postgresql
+    urls:
+    - charts/postgresql-8.2.1.tgz
     version: 8.2.1
-    repository: https://charts.helm.sh/stable
-    condition: postgresql.enabled
-annotations:
-  artifacthub.io/category: skip-prediction
-  artifacthub.io/changes: |
-    - kind: fixed
-      description: Issue closing vote
-    - kind: changed
-      description: Upgrade dependencies
-  artifacthub.io/containsSecurityUpdates: "true"
-  artifacthub.io/images: |
-    - name: dbmigrator
-      image: public.ecr.aws/j6p2z9l1/wikivote-dbmigrator
-    - name: wikivote
-      image: public.ecr.aws/j6p2z9l1/wikivote
-  artifacthub.io/links: |
-    - name: source
-      url: https://github.com/wikidevllc/wikivote
-    - name: support
-      url: https://github.com/wikidevllc/wikivote/issues
+generated: "2023-12-16T13:06:31.982855-06:00"

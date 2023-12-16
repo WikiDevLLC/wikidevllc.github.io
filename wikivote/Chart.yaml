@@ -3,6 +3,7 @@ name: wikivote
 description: WikiVote is a GitHub application that allows holding a vote on issues and pull requests
 type: application
 version: 1.1.1
+appVersion: 1.1.1
 kubeVersion: ">= 1.19.0-0"
 home: https://wikidev.org/
 icon: https://raw.githubusercontent.com/wikidevllc/wikivote/main/docs/logo/logo.png
