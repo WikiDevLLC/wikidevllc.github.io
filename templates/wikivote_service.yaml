@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "chart.resourceNamePrefix" . }}wikivote
+  labels:
+    app.kubernetes.io/component: wikivote
+    {{- include "chart.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.wikivote.service.type }}
+  ports:
+    - port: {{ .Values.wikivote.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    app.kubernetes.io/component: wikivote
+    {{- include "chart.selectorLabels" . | nindent 4 }}
