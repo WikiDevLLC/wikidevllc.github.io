@@ -31,7 +31,7 @@ spec:
             - name: dbmigrator-config
               mountPath: {{ .Values.configDir }}
               readOnly: true
-          command: ["./database/migrations/migrate.sh"]
+          command: ["./migrate.sh"]
       volumes:
         - name: dbmigrator-config
           secret:
