@@ -36,7 +36,7 @@ dbmigrator:
   job:
     image:
       # Database migrator image repository (without the tag)
-      repository: public.ecr.aws/j6p2z9l1/wikivote-dbmigrator
+      repository: public.ecr.aws/g6m3a0y9/wikivote-dbmigrator
 
 # WikiVote service configuration
 wikivote:
@@ -51,9 +51,36 @@ wikivote:
     # GitHub application ID
     appID: 702246
     # GitHub application private key path
-    appPrivateKey: null
+    appPrivateKey: |-
+        -----BEGIN RSA PRIVATE KEY-----
+        MIIEpQIBAAKCAQEAyVAs8CDjnDIfIaXc2yTBjV7ZK1wvZFbjEDNPYXoGD5EZIlNS
+        cuS0qGaUzAqkJ5+UsDw8dddBfe1ZXhzNg2QQJ4P6e7hM2l90gYtPnTWFUblQvRQ+
+        5IzMQ53IP3aRxPmNCzZCJNvNlcWASvNLUvT5uJ/BeJu7kjX1rJiP8nf7GE5XcNKf
+        KgzIpZFBU1NUw5/wNJpIhJkALyK89H5IPOGKAzpAL4qOijy21lA6BRqNiA4lB29j
+        vQB6fv6Dx6nWOPNqywccAP2w+RaUtNI1odhErLaM6YoawQXf8M+Rym3Zh9FUxi7J
+        KVKZMNI0zNJwOK3MNGBM+NMvLSqtkpxBO2af1wIDAQABAoIBAGIZb8yUOlYjFoiP
+        CtC/WJJLZgh7I50BuiRq3IPjspBjZJwVflf+mwp08o17ogKtAQfgUpYaDxAOWT5D
+        SuJ8IGMhLS6c4NaJLXzzJhi1vAHXDEEXXI6DDgblHG/Ql7gk41ZTWmgbtFMHqzza
+        0hnaxtXxA5aCTSUypkU1EvBVB0cQB/vzd4R8CO26CI8lX8ApDAFBkjg2ZmIIvbo2
+        //iL0kP53hwyaUiX36o0ZsL4MavCV9XXP4LGFG42Amz220dfJLCd1Prm+oKpfiXR
+        /QTp1Fwzfu+AENf66lDNSPX/XgJHJJivbYkfplvEdcvcGp7HJ45TAEHaVne6R/Wk
+        lsN42gECgYEA91AMioCaYkfzfZxDvPlr6uwNr1/XzrAWb58Bfqhzvo8DGhGJypeQ
+        yXodbrmRrP0vqxed02RRMdvBxdomkMcJH1MifEAlNs+4lX3bXdkxzpy5RmLVH0pt
+        KKW1J4Uy03vCL+wkkcsc0Fa+ZV+FrdIXVNRew2df1FxDU5ZTwCf3ur0CgYEA0GJ6
+        QNi+u7TOlHFvJyLi3XD4LXU7DFzPgqo6JAEYi7ZMbDmS7xUI+af3Jagk7ZfKcIIq
+        qMNZbCFbpYkDdjJYPgDZzj2LGFpUPjG0Yh4DoRu52f9Grc23eqmROwu0c073vwR1
+        5uHzvJNzF6H/fzw/ttFtq0K+kxqlLHR8u8C1+CMCgYEAsLJYw3wu0ZlmtpA3NYVf
+        PXF6NZrcrafR395TSxM/3x5+sNlnAYBYyhqdfMbI9jfPHwa4lJhQCrdgMuQyOa57
+        Lg5PzUZnUEoJL4XEfcD4fQ4sscVbUAf1Bd2fGKVqMv9xNpwZZLEh3Ric4ADnmdFJ
+        KiqxqhrptOhWkhoNrHTh4mECgYEAxU9Zfqk8ADO1Hu1BWAc6VH6xHynPXWdLvOc9
+        4fV/rlpQhnEFZYe/VdTquSc6wBVnw5wclGtT8oSraFQRiQsmbp8TnKq9V7O/7JvX
+        tsfAm/3KvlVuMQeGYYjJUOVGWaA+CQpKMPFlffsHkSr85xa/JXWrp+us01D5cNxj
+        dsuEAY0CgYEAs8/T7VbnJttxQcNkoT2xcf4F8c4vk3kEoy8y2zDcfP6ks0rT3XHL
+        p46Y6aZ0NV1pkSXewhptTpeG6QORCXCblJn1gEPpNcgLqMiHzbot+TV8+LnHiNj3
+        JhQNpVcr9eEfe92aJe0T6JshkkUoRNCnJlkUFFup07Bxi+MKSus+TcE=
+        -----END RSA PRIVATE KEY-----
     # GitHub application webhook secret
-    webhookSecret: null
+    webhookSecret: "8039c8a4e67c20c79c5d9779d045f5e052d4a9e95bac95b91f802d6c26c76349"
 
   # Ingress configuration
   ingress:
@@ -72,7 +99,7 @@ wikivote:
   deploy:
     replicaCount: 1
     image:
-      repository: public.ecr.aws/j6p2z9l1/wikivote
+      repository: public.ecr.aws/g6m3a0y9/wikivote
     resources: {}
 
 # PostgreSQL configuration
