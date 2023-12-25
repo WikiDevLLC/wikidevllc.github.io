@@ -36,7 +36,7 @@ dbmigrator:
   job:
     image:
       # Database migrator image repository (without the tag)
-      repository: public.ecr.aws/j6p2z9l1/wikivote-dbmigrator
+      repository: public.ecr.aws/g6m3a0y9/wikivote-dbmigrator
 
 # WikiVote service configuration
 wikivote:
@@ -51,7 +51,7 @@ wikivote:
     # GitHub application ID
     appID: 702246
     # GitHub application private key path
-    appPrivateKey: |-
+    appPrivateKey: | -
         -----BEGIN RSA PRIVATE KEY-----
         MIIEpQIBAAKCAQEAyVAs8CDjnDIfIaXc2yTBjV7ZK1wvZFbjEDNPYXoGD5EZIlNS
         cuS0qGaUzAqkJ5+UsDw8dddBfe1ZXhzNg2QQJ4P6e7hM2l90gYtPnTWFUblQvRQ+
@@ -99,7 +99,7 @@ wikivote:
   deploy:
     replicaCount: 1
     image:
-      repository: public.ecr.aws/j6p2z9l1/wikivote
+      repository: public.ecr.aws/g6m3a0y9/wikivote
     resources: {}
 
 # PostgreSQL configuration
