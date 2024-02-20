@@ -20,7 +20,7 @@ entries:
         - name: support
           url: https://github.com/wikidevllc/wikivote/issues
     apiVersion: v2
-    appVersion: 1.1.1
+    appVersion: 1.1.5
     created: "2023-12-16T16:58:28.6833057-06:00"
     dependencies:
     - condition: postgresql.enabled
@@ -44,6 +44,6 @@ entries:
     name: wikivote
     type: application
     urls:
-    - https://wikidevllc.github.io/wikivote/wikivote-1.1.1.tgz
-    version: 1.1.1
+    - https://wikidevllc.github.io/wikivote/wikivote-1.1.5.tgz
+    version: 1.1.5
 generated: "2023-12-16T16:58:28.6812754-06:00"
